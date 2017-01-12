@@ -1,6 +1,8 @@
 body {
   padding: 8px;
   background-color: #BCA4DA;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .rounded-corners{
@@ -38,4 +40,15 @@ body {
   max-width: 800px;
   text-align: center;
   margin: auto;
+}
+
+.resume{
+  padding: 10px;
+  background-color: #F5EFE0;
+}
+
+.section-header p{
+  font-variant: small-caps;
+  text-align: left;
+  margin: 0px;
 }
