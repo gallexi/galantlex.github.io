@@ -47,8 +47,33 @@ body {
   background-color: #F5EFE0;
 }
 
-.section-header p{
+.resume h1{
+  color: #DE7A02;
+}
+
+.resume-header p{
   font-variant: small-caps;
   text-align: left;
   margin: 0px;
 }
+
+.resume-section {
+  text-align: left;
+}
+
+.resume-subheader{
+  color: #DE7A02;
+  font-weight: bold;
+  width: 15%;
+  float: left;
+  padding: 8px;
+}
+
+.resume-text{
+  float: right;
+  width: 75%;
+  padding: 8px;
+}
+
+.row:before, .row:after {content: ""; display: table;}
+.row:after{ clear: both; }
