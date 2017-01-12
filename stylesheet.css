@@ -1,0 +1,41 @@
+body {
+  padding: 8px;
+  background-color: #BCA4DA;
+}
+
+.rounded-corners{
+  border-radius: 5px;
+}
+
+.nav-list {
+  background-color: grey;
+  list-style-type: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+}
+
+.nav-link {
+  background-color: grey;
+  padding: 15px;
+  display: inline;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+ 
+ .active {
+  background-color: black;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+ }
+ 
+ .page-body{
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
