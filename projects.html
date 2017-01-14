@@ -65,8 +65,20 @@
       <div class="row">
         <div class="project-text pull-left">
           <h1> Boolean Satisfiability Solver </h1>
-          <p> Written for Tufts' Programming Languages class in 2017, this project is built in scheme 
-          and uses continuation passing style as a technique to solve complex boolean formulas.</p>
+          <p> Written for Tufts' Programming Languages class in 2017, this project is built in Scheme
+          and is able to solve complex boolean formulas using continuation passing style, or CPS.
+          CPS is a trial-and-error technique similar to recursion that passes blocks of code, or "continuations", 
+          through repeated function calls. Typically this includes "success" and "failure" continuations, which
+          are called when one of those trial-and-error solutions either succeeds or fails, respectively. </p>
+          
+          <p> In the case of this project, the solver takes a pre-fix formula, such as "(and a b)", and tries to find boolean
+          substitutions which make the formula true. It looks at the operator, "and", and knows that for the whole
+          formula to be true, the rest of the terms in the list must all be true. It then looks at the first term, "a", and 
+          makes that true by trying the substitution {a => #t}. Then it calls the "success" continuation, which sees "b"
+          and adds the substitution {b => #t}. Now it has {a => #t, b => #t}, and the formula is solved! It calls the final
+          "success" continuation, which delivers the substitution to the user. The process is more complicated when
+          you throw in "not"s and "or"s, but that's essentially it! If, in the end, there is no solution that can make the
+          formula true, then the solver returns the final failure continuation of "no-solution".</p>
         </div>
         <div class="project-pic pull-right">
           <img src="satsolver.png" alt="Green check mark and red x clipart" class="project-image"/>
@@ -80,8 +92,10 @@
         <div class="project-text pull-right">
           <h1> Hindley-Milner Type Inferencer </h1>
           <p> Also written for Programming Languages in 2017, this project is built in SML and implements
-          hindley-milner type inferencing rules for an ML interpreter otherwise written by 
-          <a href="http://www.cs.tufts.edu/~nr/"> Norman Ramsey</a>. </p>
+          Hindley-Milner type inferencing rules for an nML interpreter otherwise written by 
+          <a href="http://www.cs.tufts.edu/~nr/"> Norman Ramsey</a>. This project was great for learning about
+          type inferencing and constraints, as well as type checking, which all comes in handy every time I'm 
+          coding and get an unexpected type clash!</p>
         </div>
       </div>
       <hr/>
@@ -90,7 +104,7 @@
           <h1> Image Compressor </h1>
           <p>This program was written in C with <a href="http://edobranov.github.io/">Evgeni Dobranov</a> for
           Tufts' Machine Structure and Assembly Programming course in Fall 2016. Given a PPM image, it
-          compresses the file down through 8 stages of compression, resulting in an output about 1/3rd the
+          compresses the file down through 8 stages of a JPEG-like compression, resulting in an output about 1/3rd the
           size of the original file. Then, the program can read in that compressed file and decompress it,
           producing an image with less than 4% error compared with the original image, on all test images.</p>
         </div>
