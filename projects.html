@@ -75,7 +75,9 @@
           substitutions which make the formula true. It looks at the operator, "and", and knows that for the whole
           formula to be true, the rest of the terms in the list must all be true. It then looks at the first term, "a", and 
           makes that true by trying the substitution {a => #t}. Then it calls the "success" continuation, which sees "b"
-          and adds the substitution {b => #t}. Now it has {a => #t, b => #t}, and the formula is solved! It calls the final
+          and adds the substitution {b => #t}. </p>
+          
+          <p>Now it has {a => #t, b => #t}, and the formula is solved! It calls the final
           "success" continuation, which delivers the substitution to the user. The process is more complicated when
           you throw in "not"s and "or"s, but that's essentially it! If, in the end, there is no solution that can make the
           formula true, then the solver returns the final failure continuation of "no-solution".</p>
