@@ -79,21 +79,35 @@ h1{
   padding: 8px;
 }
 
+.project{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .project-text{
+  width: 65%;
+}
+
+.pull-right{
   float: right;
-  width: 70%;
+  text-align: right;
+  margin-right: 2%;
+}
+
+.pull-left{
+  float: left;
+  text-align: left;
+  margin-left: 2%;
 }
 
 .project-pic{
-  float: right;
   width: 30%;
-  text-align: center;
+  padding-top: 5%;
  }
  
- .project-image{
+ .project-pic img{
   max-height: 200px;
   max-width: 200px;
-  margin: 20px;
  }
 
 .row:before, .row:after {
