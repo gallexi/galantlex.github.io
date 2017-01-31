@@ -5,6 +5,10 @@ body {
   margin: auto;
 }
 
+#index-pic{
+  max-width: 200px;
+}
+
 .rounded-corners{
   border-radius: 5px;
 }
