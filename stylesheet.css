@@ -3,8 +3,6 @@ body {
   max-width: 1000px;
   margin: auto;
   line-height: 135%;
-  text-ren­der­ing: op­ti­mizeLeg­i­bil­ity;
-  font-fea­ture-set­tings: <kern>;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -17,7 +15,6 @@ body {
 }
 
 .nav-list {
-  background-color: grey;
   list-style-type: none;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -25,22 +22,17 @@ body {
 }
 
 .nav-link {
-  background-color: grey;
   padding: 15px;
   display: inline;
 }
 
 .nav-link a {
-  color: white;
   text-decoration: none;
   padding: 20px;
   text-align: center;
 }
 
  .active {
-  background-color: black;
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
  }
 
  .page-body{
