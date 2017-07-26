@@ -3,10 +3,10 @@ body {
   background-color: #BCA4DA;
   max-width: 1000px;
   margin: auto;
-  line-height: 130%;
+  line-height: 135%;
   text-ren­der­ing: op­ti­mizeLeg­i­bil­ity;
   font-fea­ture-set­tings: <kern>;
-  font-family: optima;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #index-pic{
@@ -59,9 +59,12 @@ body {
   background-color: #F5EFE0;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Ovo', serif;
+}
+
 h1{
   color: #DE7A02;
-  font-family: hoefler-text;
 }
 
 .resume-header p{
