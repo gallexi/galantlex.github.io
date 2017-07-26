@@ -1,6 +1,5 @@
 body {
   padding: 8px;
-  background-color: #BCA4DA;
   max-width: 1000px;
   margin: auto;
   line-height: 135%;
@@ -50,13 +49,11 @@ body {
   margin: auto;
   padding: 10px;
   padding-bottom: 20px;
-  background-color: #F5E0F5;
 }
 
 .resume{
   margin: -10px;
   padding: 10px;
-  background-color: #F5EFE0;
 }
 
 h1, h2, h3, h4, h5, h6{
