@@ -1,0 +1,26 @@
+# Site settings
+title: Lexi Galantino
+author: Lexi Galantino
+author_nickname: Lexi Galantino
+email: YOUR_EMAIL_HERE
+description: "Lexi's personal website or whatever"
+baseurl: ""
+url: "https://galantino.pw"
+
+twitter:
+  username: galantlex
+
+github:
+  repository_url: https://github.com/galantlex/galantlex.github.io
+  branch: master
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM # GitHub Flavored Markdown
+  hard_wrap: false
+
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
