@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Lexi Galantino
+author: Lexi Galantino
+author_nickname: Lexi
 email: contact@galantino.pw
 description: > # this means to ignore newlines until "baseurl:"
   Web developer, pre-med student, sound designer.
@@ -24,18 +26,13 @@ github_username:  galantlex
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM # GitHub Flavored Markdown
+  hard_wrap: false
 theme: jekyll-athena
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+github:
+  repository_url: https://github.com/galantlex/galantlex.github.io
+  branch: master
