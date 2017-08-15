@@ -1,0 +1,119 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+    <title>Floorcraft - Prototype</title>
+    <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(600, 500, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+function preload() {
+
+     game.load.image('sky', 'assets/floor.png');
+     game.load.spritesheet('dude', 'assets/paso1.png', 64, 64);
+
+}
+
+var player;
+var platforms;
+var cursors;
+
+var stars;
+var score = 0;
+var scoreText;
+
+function create() {
+
+    //  We're going to be using physics, so enable the Arcade Physics system
+    game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    //  A simple background for our game
+    game.add.sprite(0, 0, 'sky');
+
+    // The player and its settings
+    player = game.add.sprite(32, game.world.height - 150, 'dude');
+
+    //  We need to enable physics on the player
+    game.physics.arcade.enable(player);
+
+    //  Player physics properties. Give the little guy a slight bounce.
+    player.body.collideWorldBounds = true;
+
+    //  Our two animations, walking left and right.
+    player.animations.add('walking', [1, 2], 2, true);
+    player.animations.add('swing', [3, 4, 5, 6, 7, 8], 2, true);
+
+    //  The score
+    scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    //  Our controls.
+    cursors = game.input.keyboard.createCursorKeys();
+    swingbutton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+}
+
+function update() {
+
+     
+
+     if (swingbutton.isDown && (player.body.velocity.x != 0 ||
+         player.body.velocity.y != 0))
+	{
+	    player.animations.play('swing');
+	    score++;
+	    scoreText.text = 'Score: ' + score;
+	}
+     else{
+	  //  Reset the players velocity (movement)
+	 player.body.velocity.x = 0;
+	 player.body.velocity.y = 0;
+   
+	 if (cursors.left.isDown)
+	     {
+		 //  Move to the left
+		 player.body.velocity.x = -90;
+		 
+		 player.animations.play('walking');
+	     }
+	 else if (cursors.right.isDown)
+	     {
+		 //  Move to the right
+		 player.body.velocity.x = 90;
+		 
+		 player.animations.play('walking');
+	     }
+	 
+	 else if (cursors.up.isDown)
+	     {
+		 player.body.velocity.y = -90;
+		 player.animations.play('walking');
+	     }
+	 
+	 else if (cursors.down.isDown)
+	     {
+		 player.body.velocity.y = 90;
+		 player.animations.play('walking');
+	     }
+	 else
+	     {
+		 //  Stand still
+		 player.animations.stop();
+		 
+		 player.frame = 0;
+	     }
+     }
+}
+ 
+</script>
+<p> Use the arrow keys to move the dancers. Hold the spacebar while moving to
+    do a trick and get points!<p>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body {
+  padding: 8px;
+  max-width: 1000px;
+  margin: auto;
+  line-height: 140%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100%;
+}
+
+#index-pic{
+  max-width: 200px;
+}
+
+.rounded-corners{
+  border-radius: 5px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+}
+
+.nav-link {
+  padding: 15px;
+  display: inline;
+}
+
+.nav-link a {
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+ .active {
+ }
+
+ .page-body{
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.home{
+  padding-top:7%;
+}
+
+.resume{
+  margin: -10px;
+  padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Ovo', serif;
+}
+
+h1{
+  color: #DE7A02;
+}
+
+p{
+  font-size: 1.125em;
+}
+
+.resume-header p{
+  font-variant: small-caps;
+  text-align: left;
+  margin: 0px;
+}
+
+.resume-section {
+  text-align: left;
+}
+
+.resume-subheader{
+  color: #DE7A02;
+  font-weight: bold;
+  width: 15%;
+  float: left;
+  padding: 8px;
+}
+
+.resume-text{
+  float: right;
+  width: 75%;
+  padding: 8px;
+}
+
+.project{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.project-text{
+  width: 65%;
+}
+
+.pull-right{
+  float: right;
+  text-align: right;
+  margin-right: 2%;
+}
+
+.pull-left{
+  float: left;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.project-pic{
+  width: 30%;
+  padding-top: 5%;
+ }
+
+ .project-pic img{
+  max-height: 200px;
+  max-width: 200px;
+ }
+
+.row:before, .row:after {
+  content: ""; display: table;
+}
+
+.row:after{
+  clear: both;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+  display: inline;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+    width: 210px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width:210px;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
