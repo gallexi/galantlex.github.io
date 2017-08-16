@@ -18,7 +18,7 @@ author: Lexi Galantino
 author_nickname: Lexi
 email: contact@galantino.pw
 description: > # this means to ignore newlines until "baseurl:"
-  Web developer, pre-med student, sound designer.
+  Web developer, sound designer, ballroom dancer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://galantino.pw" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: galantlex
@@ -36,3 +36,11 @@ plugins:
 github:
   repository_url: https://github.com/galantlex/galantlex.github.io
   branch: master
+
+defaults:
+  - scope:
+      path: "resume.pdf"
+    values:
+      layout: page
+      title: Resume
+      permalink: /resume.pdf
