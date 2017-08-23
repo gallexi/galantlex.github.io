@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Shipping to prod"
+subtitle: "My experience building a new feature for over 22 million users"
+date: 2017-08-22 1:54:00 -0400
+categories: writing
+---
+
+This summer I had the truly unforgettable experience of working as an application engineering intern at GitHub. I was officially part of team Workflow Party Corgis, an intrepid bunch of four interns and our four senior engineer buddies, along with two engineering managers and our very own trusty designer. Over the course of ten weeks, the Party Corgis collaborated with teams from across the company, including Data Analysis, Design, Documentation, Editorial, Platform, Product, Security, Social Media, and Support, and we eventually found ourselves with a feature in two parts: a toolbar, for inline actions in the code view, and a rendering function, for showing previews of code inside issues and pull requests. I've been asked to blog a bit about our journey, so, well, here goes!

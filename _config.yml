@@ -1,0 +1,33 @@
+title: Lexi Galantino
+author: Lexi Galantino
+author_nickname: Lexi
+email: contact@galantino.pw
+description: >
+  Web developer, sound designer, ballroom dancer.
+baseurl: ""
+url: "http://galantino.pw"
+twitter_username: galantlex
+github_username:  galantlex
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM # GitHub Flavored Markdown
+  hard_wrap: false
+plugins:
+  - jekyll-feed
+theme-color: light
+
+github:
+  username: galantlex
+  repository_url: https://github.com/galantlex/galantlex.github.io
+  branch: master
+
+defaults:
+  - scope:
+      path: "resume.pdf"
+    values:
+      layout: page
+      title: Resume
+      permalink: /resume.pdf
+ 
