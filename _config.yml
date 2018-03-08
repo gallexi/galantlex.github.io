@@ -1,13 +1,12 @@
 title: Lexi Galantino
 author: Lexi Galantino
 author_nickname: Lexi
-email: contact@galantino.pw
-description: >
-  A multipurpose website!
+email: public@galantino.pw
+description: "<code>human && developer</code>"
 baseurl: ""
 url: "http://galantino.pw"
 twitter_username: galantlex
-github_username:  galantlex
+github_username:  gallexi
 
 # Build settings
 markdown: kramdown
@@ -19,8 +18,8 @@ plugins:
 theme-color: light
 
 github:
-  username: galantlex
-  repository_url: https://github.com/galantlex/galantlex.github.io
+  username: gallexi
+  repository_url: https://github.com/gallexi/gallexi.github.io
   branch: master
 
 defaults:
@@ -30,4 +29,3 @@ defaults:
       layout: page
       title: Resume
       permalink: /resume.pdf
- 
