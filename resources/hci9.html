@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Page Title</title>
+</head>
+
+<body align="center", style="background-color:powderblue;">
+
+	<h1>Interaction Testing</h1>
+	<p>Your task is to enter your date of birth below.</p>
+	
+	<div>
+		<input type="text" onfocus="startTimerManualEntry()" value="MM/DD/YYYY" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="MM/DD/YYYY" id="ManualEntry"> <br> <br>
+		<input type="Submit" onClick="submittedDatemanualEntry()"> <br>
+		<p id="AlertMessageManualEntry"></p>
+	</div>
+
+	<div id ="CalendarDivision" style="display: none;">
+		<p>Now enter your date of birth again, using the second interface.</p>
+		<input type="date" id="CalendarEntry" onclick="startTimerDropDown()"> <br> <br>
+		<input type="Submit" onClick="submittedDateDropDown()"> <br>
+		<p id="AlertMessageDropDown"></p>
+	</div>
+
+</body>
+</html>
+
+
+
+
+<script>
+
+	var clicked = false;
+	var timer = 0;
+	var theIntervalHolder;
+	
+	function startTimerManualEntry(){
+		if(clicked == false){
+			document.getElementById("ManualEntry").value = '';
+			clicked = true;
+			theIntervalHolder = setInterval("countUpManualEntry()", 1000);
+		}		
+	}
+
+	function startTimerDropDown(){
+		if(clicked == false){
+			clicked = true;
+			theIntervalHolder = setInterval("countUpManualDropDown()", 1000);
+		}
+	}
+
+	function countUpManualEntry(){
+		timer++;
+		document.getElementById("AlertMessageManualEntry").innerHTML= timer.toString();
+	}
+
+	function countUpManualDropDown(){
+		timer++;
+		document.getElementById("AlertMessageDropDown").innerHTML= timer.toString();
+	}
+
+	function submittedDatemanualEntry(){
+		var theValue = document.getElementById("ManualEntry").value;
+
+		if(theValue.match("[0-9]{2}/[0-9]{2}/[0-9]{4}")){
+			
+			window.clearInterval(theIntervalHolder)
+			document.getElementById("AlertMessageManualEntry").innerHTML = "User took " + timer.toString() + " seconds";
+			timer = 0;
+			clicked = false;
+			document.getElementById("CalendarDivision").style = "display: block;";
+		} else {
+			document.getElementById("AlertMessageManualEntry").innerHTML= "Wrong Pattern";
+			document.getElementById("ManualEntry").value = '';
+		}
+	}
+
+	function submittedDateDropDown(){
+		window.clearInterval(theIntervalHolder)
+		document.getElementById("AlertMessageDropDown").innerHTML = "User took " + timer.toString() + " seconds";
+		timer = 0;
+		clicked = false;
+	}
+
+</script>
+
