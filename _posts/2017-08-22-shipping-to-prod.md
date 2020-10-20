@@ -30,6 +30,4 @@ Overall, I spent this summer learning an incredible amount about teamwork, engin
 
 Thank you so, so much to everyone who was a part of this journey this summer, especially to my teammates Saundra, Michelle, and Bryan, and everyone else who taught me, either actively one-on-one or more distantly by example. I sincerely cannot find the words to express how grateful I am to have had this experience. Thank you.
 
-Oh, and stay tuned for a full blog feature on the Most Important Topic: the many fabulous dogs of GitHub HQ!
-
 ✨
